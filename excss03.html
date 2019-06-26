@@ -12,11 +12,11 @@
             font-size: 16px;
             line-height: 8px;
             /* 텍스트 한 줄의 높이 */
-            font-family: Georgia, "Times New Roman", serif;
+            /* font-family: Georgia, "Times New Roman", serif; */
             /* 사용할 폰트명을 ,로 구분하여 나열하면, 나열한 순서대로 찾아보고, 먼저 발견되는 폰트를 사용 */
 
             /* font: font-style font-variant font-weight font-size/line-height font-family; */
-
+            font: 16px/8px Georgia, "Times New Roman", serif;
             /* 속기법 사용시 필요없는 속성값은 지정하지 않아도 되지만, font-size와 font-family는 필수 */
         }
 
@@ -52,15 +52,15 @@
         }
 
         #p2 .s1 {
-            font-size: 16px;
+            font-size: 32px;
         }
 
-        #pa3 .s1 {
-            font-size: 16px;
+        #p3 .s1 {
+            font-size: 48px;
         }
 
         #p1 .s2 {
-            font-size: 1em;
+            font-size: 0.5em;
         }
 
         #p2 .s2 {
@@ -68,11 +68,11 @@
         }
 
         #p3 .s2 {
-            font-size: 1em;
+            font-size: 2em;
         }
 
         #p1 .s3 {
-            font-size: 100%;
+            font-size: 50%;
         }
 
         #p2 .s3 {
@@ -80,7 +80,7 @@
         }
 
         #p3 .s3 {
-            font-size: 100%;
+            font-size: 200%;
         }
 
         /* CSS에서 색상을 지정하는 방법 */
@@ -95,12 +95,20 @@
         #p1 {
             text-decoration: none;
             /* text-align: 텍스트 내용 정렬 */
+            text-align: left;
+            color: red;
+            opacity: 0.5;
         }
 
         #p2 {
+            text-decoration: line-through;
+            text-align: center;
+            color: rgba(0,255,0,0.5);
         }
 
         #p3 {
+            text-align: right;
+            color: blue;
         }
 
         ul {
@@ -108,31 +116,51 @@
             /* list-style-position : 글머리기호의 위치 (li 엘리먼트의 내부 혹은 외부) */
             /* list-style-image: url('이미지파일경로')로 글머리기호에 사용할 이미지 파일 설정 */
             /* list-style: type position image 한번에 설정 가능 */
+           /* list-style-type: none;
+            list-style-position: outside;
+            list-style-image: url('img/ball.png'); */
+            list-style: none outside url('img/ball.png');
         }
 
         li {
             /* 경계선을 1px 두께의 검정색 실선으로 설정 */
+            border: 1px solid black;
         }
-
+            
         /* 클릭하면 다음과 구글로 이동하는 링크 생성 */
         /* 링크들을 다음의 뉴스링크와 같이 보이도록 스타일 설정*/
+        a{
+            color: black;
+            text-decoration:none;
+        }
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        };
+        
+
     </style>
 </head>
 <body>
+    
+            <a href="https://www.daum.net/" >다음으로 이동</a><br><br>
+            <a href="https://www.google.co.kr/">구글로 이동</a>
+        
+
     <p id="p1">
         <span class="s1">This is paragraph01.</span> 이것은 01번째 문단입니다.<br />
         <span class="s2">This is paragraph01.</span> 이것은 01번째 문단입니다.<br />
         <span class="s3">This is paragraph01.</span> 이것은 01번째 문단입니다.<br />
     </p>
     <p id="p2">
-        <span class="sp1">This is paragraph02.</span> 이것은 02번째 문단입니다.<br />
-        <span class="sp2">This is paragraph02.</span> 이것은 02번째 문단입니다.<br />
-        <span class="sp3">This is paragraph02.</span> 이것은 02번째 문단입니다.<br />
+        <span class="s1">This is paragraph02.</span> 이것은 02번째 문단입니다.<br />
+        <span class="s2">This is paragraph02.</span> 이것은 02번째 문단입니다.<br />
+        <span class="s3">This is paragraph02.</span> 이것은 02번째 문단입니다.<br />
     </p>
     <p id="p3">
-        <span class="sp1">This is paragraph03.</span> 이것은 03번째 문단입니다.<br />
-        <span class="sp1">This is paragraph03.</span> 이것은 03번째 문단입니다.<br />
-        <span class="sp1">This is paragraph03.</span> 이것은 03번째 문단입니다.<br />
+        <span class="s1">This is paragraph03.</span> 이것은 03번째 문단입니다.<br />
+        <span class="s2">This is paragraph03.</span> 이것은 03번째 문단입니다.<br />
+        <span class="s3">This is paragraph03.</span> 이것은 03번째 문단입니다.<br />
     </p>
     <ul>
         <li>커피</li>
