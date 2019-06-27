@@ -32,16 +32,10 @@
         prodList.push( { no: 3, name: "사또밥", price: 800 } );
 
         var tbody = document.querySelector('#prods');
-        var p = prodList[0];
-        tbody.innerHTML = tbody.innerHTML + '<tr>'+ '<td>' + p.no + '</td>' + '<td>' + p.name +'</td>' + '<td>' + p.price+'</td>' + '</tr>';
-        var p = prodList[1];
-        tbody.innerHTML = tbody.innerHTML + '<tr>'+ '<td>' + p.no + '</td>' + '<td>' + p.name +'</td>' + '<td>' + p.price+'</td>' + '</tr>';
-        var p = prodList[2];
-        tbody.innerHTML = tbody.innerHTML + '<tr>'+ '<td>' + p.no + '</td>' + '<td>' + p.name +'</td>' + '<td>' + p.price+'</td>' + '</tr>';
 
         for(var i=0; i<prodList.length;i++){
             var p = prodList[i];
-            body.innerHTML = tbody.innerHTML + '<tr>'+ '<td>' + p.no + '</td>' + '<td>' + p.name +'</td>' + '<td>' + p.price+'</td>' + '</tr>';
+            tbody.innerHTML = tbody.innerHTML + '<tr>'+ '<td>' + p.no + '</td>' + '<td>' + p.name +'</td>' + '<td>' + p.price+'</td>' + '</tr>';
         }
 
         var pno = document.querySelector('#pno');
@@ -54,6 +48,7 @@
             var c = price.value;
             prodList[3]
            
+
         }
 
 
